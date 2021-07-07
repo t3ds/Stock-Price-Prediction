@@ -19,12 +19,12 @@ import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+
 import CardMedia from '@material-ui/core/CardMedia';
 import Chart from './Chart';
 import Title from './Title'
-import Deposits from './Deposits';
-import Orders from './Orders';
+import SearchContainer from './SearchContainer';
+import TopPerformers from './TopPerformers';
 import Logo_SMP from './Logo_SMP.png'
 import PredictionContainer from './PredictionContainer';
 import TrainingContainer from './TrainingContainer';
@@ -160,22 +160,22 @@ export default function Dashboard() {
                 <Chart graphData = {data}/>
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            {/* Part 30 Day Graph */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits graphData = {data} graphFunc = {setData}/>
+                <SearchContainer graphData = {data} graphFunc = {setData}/>
               </Paper>
             </Grid>
             {/* Recent Orders */}
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <Orders flag = {"Gainers"}/>
+                <TopPerformers flag = {"Gainers"}/>
               </Paper>
             </Grid>
 
             <Grid item xs={12}>
               <Paper className={classes.paper}>
-                <Orders flag = {"Losers"}/>
+                <TopPerformers flag = {"Losers"}/>
               </Paper>
             </Grid>
 
