@@ -1,3 +1,7 @@
+A stock dashboard to search the current price of the stock, get the price history of the last 30 days as well as fetch the top gainers and losers on the NSE. Eventually plan to connect it to my stock price prediction model.
+
+Made using Create React App, material-ui and flask
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
